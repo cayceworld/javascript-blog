@@ -1,7 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Oswald:400,600|Sacramento|Source+Sans+Pro:300&subset=latin-ext");
 /* Variables */
 /* Global */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -46,7 +48,8 @@ body {
   flex: 2 0 0;
 }
 
-.sidebar, .posts {
+.sidebar,
+.posts {
   background: #fff;
   margin-right: 10px;
   padding: 40px;
@@ -102,4 +105,43 @@ body {
 
 .post-tags p {
   margin: 0 10px 0 0;
+}
+
+/* Cloud */
+.list.tags li {
+  display: inline-block;
+  padding-right: 4px;
+}
+
+.list.tags li a {
+  text-decoration: none;
+}
+
+.list.authors li {
+  display: inline;
+}
+
+.list.authors a {
+  text-decoration: none;
+  padding-right: 4px;
+}
+
+.tag-size-5 {
+  font-size: 30px;
+}
+
+.tag-size-4 {
+  font-size: 26px;
+}
+
+.tag-size-3 {
+  font-size: 22px;
+}
+
+.tag-size-2 {
+  font-size: 20px;
+}
+
+.tag-size-1 {
+  font-size: 16px;
 }
