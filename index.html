@@ -59,7 +59,7 @@
                   <div class="post-tags">
                      <p><strong>Tags:</strong></p>
                      <ul class="list list-horizontal">
-                       </ul>
+                     </ul>
                   </div>
                </article>
                <article class="post" id="article-3" data-author="George Tuxedo" data-tags="cat cactus scissors">
@@ -243,7 +243,31 @@
          </main>
       </div>
    </div>
-
+   <!-- dla linka do artykułu, umieszczanego w lewej kolumnie -->
+   <script id="template-article-link" type="text/x-handlebars-template">
+      <li><a href="#{{ id }}"><span>{{ title }}</span></a></li>
+    </script>
+  <!--   dla linka do tagu, umieszczanego na końcu każdego artykułu -->
+   <script id="template-tag-link" type="text/x-handlebars-template">
+      <li><a href="#tag-{{ id }}">{{ title }}</a></li>
+    </script>
+    <!-- dla linka do autora, umieszczanego pod tytułem każdego artykułu -->
+    <script id="template-author-link" type="text/x-handlebars-template">
+      <a href="#author-{{ id }}">{{ title }}</a>
+   </script>
+   <!-- dla linka do tagu, umieszczanego w chmurze tagów w prawej kolumnie -->
+   <script id="template-tag-cloud-link" type="text/x-handlebars-template">
+      {{#each tags}}
+      <li><a  class = {{className}} href="#tag-{{ tag }}">{{ tag }}</a></li>
+      {{/each}}
+    </script>
+    <!-- dla linka do autora, umieszczanego na liście w prawej kolumnie -->
+    <script id="template-author-cloud-link" type="text/x-handlebars-template">
+      {{#each authors}}
+      <li><a  class = {{className}} href= "#author-{{ author }}">{{ author }}</a></li>
+      {{/each}}
+    </script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.0/handlebars.min.js"></script>
    <script src="js/script.js"></script>
 </body>
 
